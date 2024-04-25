@@ -1,8 +1,8 @@
 module.exports = {
     apps: [
         {
-            name: 'gotolatam-travel',
-            port: '3000',
+            name: 'southamerica-company',
+            port: '5000',
             exec_mode: 'cluster',
             instances: 'max',
             script: './.output/server/index.mjs'
