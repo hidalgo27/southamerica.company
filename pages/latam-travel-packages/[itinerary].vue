@@ -1,52 +1,54 @@
 <template>
 
   <template v-for="packages in listPackages">
-<!--  <header class="h-[75vh] relative">-->
-<!--    <img src="/images/banners/banner-lg.png" alt="" class="object-cover w-screen h-full">-->
-<!--    <div class="absolute inset-x-0 bottom-0 text-center hidden md:block">-->
+  <header class="h-[100vh] relative">
+
+    <img :src="imagen_paquetes.nombre" alt="" class="object-cover w-screen h-full" v-for="imagen_paquetes in packages.imagen_paquetes">
+    <div class="absolute inset-x-0 bottom-0 text-center hidden md:block">
 <!--      <h1 class="mb-24 font-bold text-6xl text-white">-->
 <!--        {{packages.titulo}}-->
 <!--      </h1>-->
-<!--    </div>-->
-<!--  </header>-->
-
-    <div class="relative">
-      <div class="h-[75vh] relative overflow-hidden vimeo-wrapper">
-        <iframe src="https://player.vimeo.com/video/772468390?background=1&autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1" frameborder="0" allow="autoplay; fullscreen" class=""></iframe>
-      </div>
-      <div class="absolute inset-x-0 bottom-0 text-center">
-        <h1 class="text-white text-xl md:text-4xl drop-shadow-[0_3px_6px_rgba(0,0,0,0.7)] mb-24">{{packages.titulo}}</h1>
-
-      </div>
-    </div>
-
-  <section class="bg-slate-100 py-8">
-    <div class="container grid md:grid-cols-12 gap-12 items-center">
-      <div class="md:col-span-9">
-        <div class="grid grid-cols-12 md:grid-cols-3">
-          <div class="col-span-6 md:col-span-1">
-            <h3 class="text-gray-400 text-xs flex gap-1 font-semibold mb-2 items-center"><img src="/icons/map.svg" alt="" class="opacity-70"> TRIP</h3>
-            <h2 class="md:text-2xl font-semibold">{{packages.titulo}}</h2>
+      <section class="bg-gradient-to-t from-secondary bg-opacity-40 py-8">
+        <div class="container grid md:grid-cols-12 gap-12 items-center">
+          <div class="md:col-span-9">
+            <div class="grid grid-cols-12 md:grid-cols-3">
+              <div class="col-span-6 md:col-span-1">
+                <h3 class="text-white text-xs flex justify-center gap-1 font-semibold mb-2 items-center"><img src="/icons/map.svg" alt="" class="invert"> TRIP</h3>
+                <h2 class="md:text-2xl font-semibold text-white">{{packages.titulo}}</h2>
+              </div>
+              <div class="col-span-3 md:col-span-1">
+                <h3 class="text-white text-xs flex justify-center gap-1 font-semibold mb-2 items-center"><img src="/icons/map.svg" alt="" class="invert"> DAYS</h3>
+                <h2 class="md:text-2xl font-semibold text-white">{{ packages.duracion }}D/{{ packages.duracion - 1 }}N</h2>
+              </div>
+              <div class="col-span-3 md:col-span-1 text-center">
+                <h3 class="text-white text-xs flex justify-center gap-1 font-semibold mb-2 items-center"><img src="/icons/map.svg" alt="" class="invert"> FROM</h3>
+                <h2 class="md:text-2xl font-semibold text-white  flex items-center gap-2" v-if="getThreeStarPrice(packages.precio_paquetes) > 0">
+                  ${{ getThreeStarPrice(packages.precio_paquetes) }}
+                  <span class="text-[8px] leading-3">PER <br> PERSON</span></h2>
+                <h2 class="md:text-2xl text-white font-semibold justify-center flex items-center gap-2" v-else>
+                  INQUIRE</h2>
+              </div>
+            </div>
           </div>
-          <div class="col-span-3 md:col-span-1">
-            <h3 class="text-gray-400 text-xs flex gap-1 font-semibold mb-2 items-center"><img src="/icons/map.svg" alt="" class="opacity-70"> DAYS</h3>
-            <h2 class="md:text-2xl font-semibold">{{ packages.duracion }}D/{{ packages.duracion - 1 }}N</h2>
-          </div>
-          <div class="col-span-3 md:col-span-1">
-            <h3 class="text-gray-400 text-xs flex gap-1 font-semibold mb-2 items-center"><img src="/icons/map.svg" alt="" class="opacity-70"> FROM</h3>
-            <h2 class="md:text-2xl font-semibold flex items-center gap-2" v-if="getThreeStarPrice(packages.precio_paquetes) > 0">
-              ${{ getThreeStarPrice(packages.precio_paquetes) }}
-              <span class="text-[8px] leading-3">PER <br> PERSON</span></h2>
-            <h2 class="md:text-2xl font-semibold flex items-center gap-2" v-else>
-              INQUIRE</h2>
+          <div class="md:col-span-3 hidden md:flex">
+            <a href="#form-dream-adventure" class="btn-ternary-outline text-center block w-full">Get a Quote</a>
           </div>
         </div>
-      </div>
-      <div class="md:col-span-3 hidden md:flex">
-        <a href="#form-dream-adventure" class="btn-primary text-center block w-full">Get a Quote</a>
-      </div>
+      </section>
     </div>
-  </section>
+  </header>
+
+<!--    <div class="relative">-->
+<!--      <div class="h-[75vh] relative overflow-hidden vimeo-wrapper">-->
+<!--        <iframe src="https://player.vimeo.com/video/772468390?background=1&autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1" frameborder="0" allow="autoplay; fullscreen" class=""></iframe>-->
+<!--      </div>-->
+<!--      <div class="absolute inset-x-0 bottom-0 text-center">-->
+<!--        <h1 class="text-white text-xl md:text-4xl drop-shadow-[0_3px_6px_rgba(0,0,0,0.7)] mb-24">{{packages.titulo}}</h1>-->
+
+<!--      </div>-->
+<!--    </div>-->
+
+
 
   <section class="container">
     <div class="flex gap-3 my-12 overflow-x-scroll focus:touch-pan-x">

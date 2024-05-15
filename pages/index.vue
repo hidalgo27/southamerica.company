@@ -7,11 +7,9 @@
         <iframe src="https://player.vimeo.com/video/772468390?background=1&autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1" frameborder="0" allow="autoplay; fullscreen" class=""></iframe>
       </div>
       <div class="absolute inset-x-0 mb-52 bottom-0 z-10 text-center">
-        <h2 class="text-white text-xl md:text-3xl container drop-shadow-[0_3px_6px_rgba(0,0,0,0.7)]">THE BEST VACATION IN <span class="text-primary">SOUTH AMERICA</span> <span class="text-secondary">WITH THE BEST</span> LATAM OPERATOR</h2>
+        <h2 class="text-white text-xl md:text-3xl container drop-shadow-[0_3px_6px_rgba(0,0,0,0.7)]">THE BEST VACATION IN <span class="text-tertiary">SOUTH AMERICA</span> <span class="">WITH THE BEST</span> LATAM OPERATOR</h2>
 
 <!--        <InquireHome></InquireHome>-->
-
-
         
       </div>
       <div class="absolute inset-0 bg-gradient-to-t to-70% from-gray-900 from-0% opacity-50"></div>
@@ -89,7 +87,7 @@
               <br> Our family of travel specialists <br> has the goal of keeping our organization <br> positioned among the best operators in LATAM,
               <br>providing all the amenities that all our travelers need.</p>
 
-            <a href="#form-dream-adventure" class="btn-primary">Create My Trip Now</a>
+            <a href="#form-dream-adventure" class="btn-ternary-outline">Create My Trip Now</a>
           </div>
         </div>
       </div>

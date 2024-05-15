@@ -30,8 +30,9 @@ module.exports = {
       orange: colors.orange,
       lime: colors.lime,
       // primary: '#0855c4',
-      primary: '#7D8506',
-      secondary: '#F9A825',
+      primary: '#6e4606',
+      secondary: '#000',
+      tertiary: '#F9A825',
       background: "#e5e5e5",
       surface: "#ffffff",
       "vtd-primary": colors.sky, // Light mode Datepicker color
